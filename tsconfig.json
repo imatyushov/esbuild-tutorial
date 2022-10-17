@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    //куда собрать?
+    "outDir": "./build",
+    //запрет на тип any
+    "noImplicitAny": true,
+    "module": "ESNext",
+    //в какой формат компилируем, ecmascript6
+    "target": "ES6",
+    "jsx": "react-jsx",
+    //компилятор будет обрабатывать не только TS файлы, но и JS файлы
+    "allowJs": true,
+    //строгий режим
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    //Обязательное поле при использовании с ESbuild
+    "isolatedModules": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
+}

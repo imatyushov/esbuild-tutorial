@@ -1,0 +1,27 @@
+
+                         <!doctype html>
+                         <html lang="en">
+                            <head>
+                                <meta charset="UTF-8">
+                                <meta name="viewport"
+                                    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                                <title>Html file title</title>
+                                <link href=bundle.index-hash.css rel='stylesheet'><link>
+                            </head>
+                            <body>
+                            <div id="root"></div>
+                                <script src=bundle.index-hash.js></script>
+                                <script>
+                                const eventSource = new EventSource('http://localhost:3000/subscribe')
+                                eventSource.onopen = function () {console.log('open')}
+                                eventSource.onmessage = function () {
+                                    console.log('message')
+                                    window.location.reload()
+                                }
+                                eventSource.onerror = function () {console.log('error')}
+                                </script>
+                                       
+                            </body>
+                           </html>
+                                        
